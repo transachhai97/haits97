@@ -10,6 +10,9 @@ module.exports = {
             '@': path.resolve(__dirname, './src'),
         });
 
+        config.optimization.minimizer[0].options.extractComments = false;
+        config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+
         return config;
     }
 };
