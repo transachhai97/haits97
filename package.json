@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn clean && react-app-rewired start",
     "build": "yarn clean && react-app-rewired build",
-    "deloy": "netlify deploy --prod",
+    "deloy": "yarn build && netlify deploy --prod --dir=build",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
     "clean": "yarn stylelint && yarn eslint"
