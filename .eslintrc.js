@@ -6,8 +6,13 @@ module.exports = {
         node: true,
     },
     extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
         'airbnb',
         'airbnb/hooks',
+    ],
+    plugins: [
+        'react',
     ],
     parser: 'babel-eslint',
     rules: {
