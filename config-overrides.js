@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
@@ -15,7 +16,7 @@ module.exports = {
 
         config.plugins.push(
             new StyleLintPlugin({
-                files: [`src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}`],
+                files: ['src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}'],
             }),
         );
 
@@ -28,5 +29,5 @@ module.exports = {
         config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
 
         return config;
-    }
+    },
 };
