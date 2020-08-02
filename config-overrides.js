@@ -28,6 +28,12 @@ module.exports = {
         config.optimization.minimizer[0].options.extractComments = false;
         config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
 
+        config.module.rules[2].oneOf[5].use[1].options = {
+            modules: {
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+            },
+        };
+
         return config;
     },
 };

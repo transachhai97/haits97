@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from '@/logo.svg';
-import '@/App.scss';
+import stylesApp from '@/App.scss';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+        <div className={stylesApp.app}>
+            <header className={stylesApp.header}>
+                <img src={logo} className={stylesApp.logo} alt="logo" />
                 <p>
                     Edit
                     {' '}
@@ -15,7 +15,7 @@ function App() {
                     and save to reload.
                 </p>
                 <a
-                    className="App-link"
+                    className={stylesApp.link}
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"
