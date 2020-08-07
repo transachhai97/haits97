@@ -21,7 +21,11 @@ module.exports = {
         );
 
         config.output.filename = isProduction ? 'static/js/[name].[contenthash:8].js' : 'static/js/[name].[hash].js';
+        config.output.chunkFilename = isProduction ? 'static/js/chunks/[name].[contenthash:8].js' : 'static/js/chunks/[name].[hash].js';
+
         config.plugins[4].options.filename = 'static/css/[name].[contenthash:8].css';
+        config.plugins[4].options.chunkFilename = 'static/css/chunks/[name].[contenthash:8].css';
+
         config.module.rules[2].oneOf[0].options.name = 'static/media/[name].[hash:8].[ext]';
         config.module.rules[2].oneOf[7].options.name = 'static/media/[name].[hash:8].[ext]';
 
