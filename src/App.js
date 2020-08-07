@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import logo from '@/logo.svg';
 import stylesApp from '@/App.scss';
 
-function App() {
+function App(props) {
+    const { name } = props;
+
     return (
         <div className={stylesApp.app}>
             <header className={stylesApp.header}>
@@ -22,9 +26,18 @@ function App() {
                 >
                     Learn React
                 </a>
+                <h1>{name}</h1>
             </header>
         </div>
     );
 }
+
+App.propTypes = {
+    name: PropTypes.string,
+};
+
+App.defaultProps = {
+    name: 'Hai',
+};
 
 export default App;

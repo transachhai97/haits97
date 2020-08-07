@@ -8,7 +8,7 @@ import App from '@/App';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <App name="Trần Sách Hải" />
     </React.StrictMode>,
     document.getElementById('root'),
 );
