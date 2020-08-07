@@ -9,7 +9,7 @@
     "deloy": "yarn build && netlify deploy --prod --dir=build",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
-    "clean": "yarn stylelint && yarn eslint"
+    "clean": "npm-run-all stylelint eslint"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -29,6 +29,7 @@
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "react-app-rewired": "^2.1.6",
     "stylelint": "^13.6.1",
     "stylelint-config-airbnb": "^0.0.0",
