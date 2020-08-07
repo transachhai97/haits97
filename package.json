@@ -5,7 +5,7 @@
   "homepage": ".",
   "scripts": {
     "start": "yarn clean && cross-env BROWSER=none react-app-rewired start",
-    "build": "yarn clean && react-app-rewired build",
+    "build": "yarn clean && env-cmd -f .env react-app-rewired build",
     "deloy": "yarn build && netlify deploy --prod --dir=build",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
+    "env-cmd": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
