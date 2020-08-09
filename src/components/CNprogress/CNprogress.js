@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 
 import NProgress from 'nprogress';
 
+import GlobalLoading from '@/components/GlobalLoading/GlobalLoading';
+
 import 'nprogress/nprogress.css';
 
 const CNprogress = () => {
@@ -13,7 +15,7 @@ const CNprogress = () => {
         };
     }, []);
 
-    return <div>Loading...</div>;
+    return <GlobalLoading />;
 };
 
 export default CNprogress;
