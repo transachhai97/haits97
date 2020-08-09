@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import logo from '@/logo.svg';
-import stylesApp from '@/App.scss';
+import stylesApp from './css/App.scss';
 
 function App(props) {
     const { name } = props;

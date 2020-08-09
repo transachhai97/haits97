@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 
 import CNprogress from '@/components/CNprogress/CNprogress';
 
-import '@/index.scss';
+import '@/styles/index.scss';
 
-const App = React.lazy(() => import('@/App'));
+const App = React.lazy(() => import('@/components/App/App'));
 
 ReactDOM.render(
     <React.StrictMode>
