@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import logo from '@/logo.svg';
+import logo from '@/assets/images/logo.svg';
 import stylesApp from './css/App.scss';
 
 function App(props) {
