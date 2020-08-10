@@ -11,14 +11,14 @@ import '@/styles/index.scss';
 
 import '@/locales/i18n';
 
-const App = React.lazy(() => import('@/components/App/App'));
+const AppComponent = React.lazy(() => import('@/components/App/AppComponent'));
 
 ReactDOM.render(
     <React.StrictMode>
         <Suspense fallback={<CNprogress />}>
             <>
                 <ChangeLanguage />
-                <App name="Trần Sách Hải" />
+                <AppComponent name="Trần Sách Hải" />
             </>
         </Suspense>
     </React.StrictMode>,

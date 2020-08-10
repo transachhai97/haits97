@@ -1,45 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 
-import logo from '@/assets/images/logo.svg';
-import stylesApp from './css/App.scss';
-
-function App(props) {
-    const { t } = useTranslation();
-    const { name } = props;
-
-    return (
-        <div className={stylesApp.app}>
-            <header className={stylesApp.header}>
-                <img src={logo} className={stylesApp.logo} alt="logo" />
-                <p>
-                    Edit
-                    {' '}
-                    <code>src/App.js</code>
-                    {' '}
-                    and save to reload.
-                </p>
-                <a
-                    className={stylesApp.link}
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                <h1>{`${t('hello')} ${name}`}</h1>
-            </header>
-        </div>
-    );
-}
-
-App.propTypes = {
+export const propTypesApp = {
     name: PropTypes.string,
 };
 
-App.defaultProps = {
+export const defaultPropsApp = {
     name: 'Hai',
 };
-
-export default App;
