@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import i18n from '@/locale/i18n';
+import { useTranslation } from 'react-i18next';
 
 import logo from '@/assets/images/logo.svg';
 import stylesApp from './css/App.scss';
 
 function App(props) {
+    const { t } = useTranslation();
     const { name } = props;
 
     return (
@@ -28,7 +28,7 @@ function App(props) {
                 >
                     Learn React
                 </a>
-                <h1>{`${i18n.t('hello')} ${name}`}</h1>
+                <h1>{`${t('hello')} ${name}`}</h1>
             </header>
         </div>
     );

@@ -1,7 +1,8 @@
 import i18next from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-import translationVI from '@/locale/vi/index.json';
-import translationEN from '@/locale/en/index.json';
+import translationVI from '@/locales/vi/index.json';
+import translationEN from '@/locales/en/index.json';
 
 const resources = {
     en: {
@@ -13,6 +14,7 @@ const resources = {
 };
 
 i18next
+    .use(initReactI18next)
     .init({
         lng: 'vi',
         fallbackLng: 'en', // use en if detected lng is not available
