@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn clean && cross-env BROWSER=none react-app-rewired start",
     "build": "yarn clean && env-cmd -f .env react-app-rewired build",
-    "deloy": "yarn build && netlify deploy --prod --dir=build",
+    "deploy": "yarn build && netlify deploy --prod --dir=build",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
     "clean": "npm-run-all stylelint eslint"
