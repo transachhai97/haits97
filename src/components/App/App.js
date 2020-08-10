@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import i18n from '@/locale/i18n';
+
 import logo from '@/assets/images/logo.svg';
 import stylesApp from './css/App.scss';
 
@@ -26,7 +28,7 @@ function App(props) {
                 >
                     Learn React
                 </a>
-                <h1>{name}</h1>
+                <h1>{`${i18n.t('hello')} ${name}`}</h1>
             </header>
         </div>
     );
