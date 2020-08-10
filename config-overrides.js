@@ -38,6 +38,8 @@ module.exports = {
             },
         };
 
+        config.module.rules[1].use = ['babel-loader', 'eslint-loader'];
+
         return config;
     },
 };
