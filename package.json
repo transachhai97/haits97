@@ -7,6 +7,7 @@
     "start": "yarn clean && cross-env BROWSER=none react-app-rewired start",
     "build": "yarn clean && env-cmd -f .env react-app-rewired build",
     "deploy": "yarn build && netlify deploy --prod --dir=build",
+    "docsify": "docsify serve docs --port 1234",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
     "clean": "npm-run-all stylelint eslint"
