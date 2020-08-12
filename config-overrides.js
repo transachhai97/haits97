@@ -40,6 +40,17 @@ module.exports = {
 
         config.module.rules[1].use = ['babel-loader', 'eslint-loader'];
 
+        config.module.rules.push(
+            {
+                test: /\.pug$/,
+                use: [
+                    require.resolve('babel-loader'),
+                    require.resolve('pug-as-jsx-loader'),
+                ],
+            },
+        );
+        config.module.rules[2].oneOf[7].exclude.push(/\.pug$/);
+
         return config;
-    },
+    }
 };

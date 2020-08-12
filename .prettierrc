@@ -1,0 +1,11 @@
+{
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": "*.pug",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

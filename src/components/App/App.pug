@@ -1,0 +1,15 @@
+div(className="{stylesApp.app}")
+    header(className="{stylesApp.header}")
+        img(src="{logo}", className="{stylesApp.logo}", alt="logo")
+        p
+            | Edit &nbsp;
+            code src/App.js
+            | &nbsp; and save to reload.
+        a(
+            className="{stylesApp.link}",
+            href="https://reactjs.org",
+            target="_blank",
+            rel="noopener noreferrer"
+        )
+            | Learn React
+        h1 {t('hello')} {props.name}
