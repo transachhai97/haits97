@@ -1,0 +1,9 @@
+// @import ./css/ChangeLanguage.scss => stylesLanguage
+
+select(
+    className="{stylesLanguage.language}",
+    onChange="{changeLanguage}",
+    value=`${i18n.language}`
+)
+    option(value="vi")= `${t('vi')}`
+    option(value="en")= `${t('en')}`

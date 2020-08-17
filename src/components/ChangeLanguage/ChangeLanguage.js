@@ -1,7 +1,6 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import stylesLanguage from './css/ChangeLanguage.scss';
+import ChangeLanguageTemplate from './ChangeLanguage.pug';
 
 function ChangeLanguage() {
     const { t, i18n } = useTranslation();
@@ -14,10 +13,11 @@ function ChangeLanguage() {
     };
 
     return (
-        <select className={stylesLanguage.language} onChange={changeLanguage} value={i18n.language}>
-            <option value="vi">{t('vi')}</option>
-            <option value="en">{t('en')}</option>
-        </select>
+        ChangeLanguageTemplate.call(this, {
+            t,
+            i18n,
+            changeLanguage,
+        })
     );
 }
 
