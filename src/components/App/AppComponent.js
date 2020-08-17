@@ -5,12 +5,10 @@ import { defaultPropsApp, propTypesApp } from '@/components/App/App';
 import AppTemplate from './App.pug';
 
 function AppComponent(props) {
-    const { t } = useTranslation();
-
     return (
         AppTemplate.call(this, {
             props,
-            t,
+            t: useTranslation().t,
         })
     );
 }
