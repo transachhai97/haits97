@@ -12,6 +12,7 @@ module.exports = {
 
         config.resolve.alias = Object.assign(config.resolve.alias, {
             '@': path.resolve(__dirname, './src'),
+            '@assets': path.resolve(__dirname, './src/assets'),
         });
 
         config.plugins.push(
