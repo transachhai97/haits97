@@ -1,9 +1,25 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
-export const propTypesApp = {
+import AppTemplate from './App.pug';
+
+function App(props) {
+    const { t } = useTranslation();
+
+    return (
+        AppTemplate.call(this, {
+            props,
+            t,
+        })
+    );
+}
+
+App.propTypes = {
     name: PropTypes.string,
 };
 
-export const defaultPropsApp = {
+App.defaultProps = {
     name: 'Hai',
 };
+
+export default App;
